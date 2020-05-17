@@ -1,6 +1,6 @@
-# icons_viewer
+# Flutter Icons Viewer
 
-A Flutter application to view icons from various sources
+A Flutter application to view icons from various flutter plugins
 
 ## Getting Started
 
