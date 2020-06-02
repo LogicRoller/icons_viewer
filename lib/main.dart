@@ -7,23 +7,52 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Icons Viewer',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Material Design Icons'),
     );
   }
 }
+
+class IconMeta {
+  final String name;
+  final IconData icon;
+
+  const IconMeta({this.name, this.icon});
+}
+
+const ICONS = [
+  IconMeta(name: 'favorite', icon: Icons.favorite),
+  IconMeta(name: 'threed_rotation', icon: Icons.threed_rotation),
+  IconMeta(name: 'four_k', icon: Icons.four_k),
+  IconMeta(name: 'ac_unit', icon: Icons.ac_unit),
+  IconMeta(name: 'access_alarm', icon: Icons.access_alarm),
+  IconMeta(name: 'access_alarms', icon: Icons.access_alarms),
+  IconMeta(name: 'access_time', icon: Icons.access_time),
+  IconMeta(name: 'accessibility', icon: Icons.accessibility),
+  IconMeta(name: 'accessibility_new', icon: Icons.accessibility_new),
+  IconMeta(name: 'accessible', icon: Icons.accessible),
+  IconMeta(name: 'accessible_forward', icon: Icons.accessible_forward),
+  IconMeta(name: 'account_balance', icon: Icons.account_balance),
+  IconMeta(name: 'account_balance_wallet', icon: Icons.account_balance_wallet),
+  IconMeta(name: 'account_box', icon: Icons.account_box),
+  IconMeta(name: 'account_circle', icon: Icons.account_circle),
+
+  IconMeta(name: 'adb', icon: Icons.adb),
+  IconMeta(name: 'add', icon: Icons.add),
+  IconMeta(name: 'add_a_photo', icon: Icons.add_a_photo),
+  IconMeta(name: 'add_alarm', icon: Icons.add_alarm),
+  IconMeta(name: 'add_alert', icon: Icons.add_alert),
+  IconMeta(name: 'add_box', icon: Icons.add_box),
+  IconMeta(name: 'add_call', icon: Icons.add_call),
+  IconMeta(name: 'add_circle', icon: Icons.add_circle),
+  IconMeta(name: 'add_circle_outline', icon: Icons.add_circle_outline),
+  IconMeta(name: 'add_comment', icon: Icons.add_comment),
+  IconMeta(name: 'add_location', icon: Icons.add_location),
+  IconMeta(name: 'add_photo_alternate', icon: Icons.add_photo_alternate),
+];
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -71,41 +100,13 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      body: ListView(children: ICONS.map((icon) {
+        return ListTile(
+          leading: Icon(icon.icon),
+          title: Text(icon.name),
+
+      );
+      }).toList(growable: false)),
     );
   }
 }
