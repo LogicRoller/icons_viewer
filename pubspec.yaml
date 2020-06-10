@@ -21,6 +21,8 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  line_awesome_icons: 1.0.4+2
+
   flutter:
     sdk: flutter
 

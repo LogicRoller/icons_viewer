@@ -31,4 +31,5 @@ const MATERIAL_ICONS = [
   IconMeta(name: 'add_comment', icon: Icons.add_comment),
   IconMeta(name: 'add_location', icon: Icons.add_location),
   IconMeta(name: 'add_photo_alternate', icon: Icons.add_photo_alternate),
+  IconMeta(name: 'share', icon: Icons.share),
 ];
