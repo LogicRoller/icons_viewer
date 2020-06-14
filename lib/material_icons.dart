@@ -814,6 +814,7 @@ const MATERIAL_ICONS = [
   IconMeta(name: 'sim_card_alert',icon: Icons.sim_card_alert),
   IconMeta(name: 'skip_next',icon: Icons.skip_next),
   IconMeta(name: 'skip_previous',icon: Icons.skip_previous),
+  IconMeta(name: 'slideshow',icon: Icons.slideshow),
 
 ];
 
