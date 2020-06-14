@@ -815,7 +815,7 @@ const MATERIAL_ICONS = [
   IconMeta(name: 'skip_next',icon: Icons.skip_next),
   IconMeta(name: 'skip_previous',icon: Icons.skip_previous),
   IconMeta(name: 'slideshow',icon: Icons.slideshow),
-
+  IconMeta(name: 'slow_motion_video', icon: Icons.slow_motion_video),
 ];
 
 
